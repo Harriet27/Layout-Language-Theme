@@ -3,38 +3,34 @@ import { IntlProvider } from "react-intl";
 import Indonesian from "../lang/id.json";
 import English from "../lang/en.json";
 
-export const Context=React.createContext();
+export const Context = React.createContext();
 
-const local=navigator.language;
+const local = navigator.language;
 
-let lang;
+let language;
 if (local === "en") {
-    lang = English;
-} else {
-    if (local === "id") {
-        lang = Indonesian;
-    }
+    language = English;
+} else if (local === "id") {
+    language = Indonesian;
 }
 
-const Wrapper=(props) => {
+const Wrapper = (props) => {
     const [locale, setLocale] = useState(local);
 
-    const [messages, setMessages] = useState(lang);
+    const [messages, setMessages] = useState(language);
 
     function selectLanguage(e) {
         const newLocale = e.target.value;
         setLocale(newLocale);
         if (newLocale === "en") {
             setMessages(English);
-        } else {
-            if (newLocale === "id"){
-                setMessages(Indonesian);
-            }
+        } else if (newLocale === "id"){
+            setMessages(Indonesian);
         }
-    }
+    };
 
     return (
-        <Context.Provider value={{locale, selectLanguage}}>
+        <Context.Provider value={{ locale, selectLanguage }}>
             <IntlProvider messages={messages} locale={locale}>
                 {props.children}
             </IntlProvider>
