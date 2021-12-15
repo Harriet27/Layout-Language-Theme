@@ -9,25 +9,25 @@ const local=navigator.language;
 
 let lang;
 if (local === "en") {
-    lang=English;
+    lang = English;
 } else {
-    if (local === "fr") {
-        lang=Indonesian;
+    if (local === "id") {
+        lang = Indonesian;
     }
 }
 
 const Wrapper=(props) => {
-    const [locale, setLocale]=useState(local);
+    const [locale, setLocale] = useState(local);
 
-    const [messages, setMessages]=useState(lang);
+    const [messages, setMessages] = useState(lang);
 
     function selectLanguage(e) {
-        const newLocale=e.target.value;
+        const newLocale = e.target.value;
         setLocale(newLocale);
         if (newLocale === "en") {
             setMessages(English);
         } else {
-            if (newLocale === "fr"){
+            if (newLocale === "id"){
                 setMessages(Indonesian);
             }
         }
