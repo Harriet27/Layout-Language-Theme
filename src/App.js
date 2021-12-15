@@ -49,17 +49,11 @@ function App(props) {
           />
         </a>
         <FormattedMessage
-          id="app.channel.plug"
+          id="app.author"
           defaultMessage="Tutorial brought to you by A.N.H"
           values={{ blogName: "A.N.H" }}
         />
-        <br/>
-        <FormattedPlural
-          id="app.plural"
-          defaultMessage="{amount, plural, =0 {no languages} one {# one language} few {# several languages} many {# lots of languages} other {# wrong fromat}}"
-          values={{ amount: 90 }}
-        />
-        <br/>
+        <br/><br/>
         <FormattedDate
           value={props.date}
           year="numeric"

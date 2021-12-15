@@ -1,6 +1,5 @@
 {
   "app.header" : "Ubah <code>{fileName}</code> dan simpan untuk mengubahnya" ,
   "app.content" : "Belajar React" ,
-  "app.channel.plug": "Tutorial dari A.N.H",
-  "app.plural": "{amount, plural, =0 {no languages} one {# one language} few {# several languages} many {# lots of languages} other {# wrong fromat}}"
+  "app.author": "Tutorial dari A.N.H"
 }
