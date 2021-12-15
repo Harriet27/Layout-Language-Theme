@@ -13,10 +13,7 @@ if (local === "en") {
 } else {
     if (local === "fr") {
         lang=Indonesian;
-    } 
-    // else {
-    //     lang=Arabic;
-    // }
+    }
 }
 
 const Wrapper=(props) => {
@@ -32,8 +29,6 @@ const Wrapper=(props) => {
         } else {
             if (newLocale === "fr"){
                 setMessages(Indonesian);
-            } else {
-                setMessages(Arabic);
             }
         }
     }

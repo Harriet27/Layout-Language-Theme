@@ -20,14 +20,11 @@ function App(props) {
 
         {/* SELECT LANGUAGE */}
         <select value={context.locale} onChange={context.selectLanguage}>
-          <option value= "ar">
-            Arabic
-          </option>
           <option value= "en">
             English
           </option>
-          <option value= "fr">
-            French
+          <option value= "id">
+            Indonesian
           </option>
         </select>
         {/* .SELECT LANGUAGE */}
