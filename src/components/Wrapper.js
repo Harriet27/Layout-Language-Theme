@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {IntlProvider} from 'react-intl';
+import React, { useState } from 'react';
+import { IntlProvider } from 'react-intl';
 import French from '../lang/fr.json';
 import Arabic from '../lang/ar.json';
 import English from '../lang/en.json';
@@ -11,7 +11,7 @@ const local = navigator.language;
 let lang;
 if (local === 'en') {
     lang = English;
-}else {
+} else {
     if (local === 'fr') {
         lang = French;
     } else {
@@ -44,9 +44,7 @@ const Wrapper = (props) => {
                 {props.children}
             </IntlProvider>
         </Context.Provider>
-
     );
-}
-
+};
 
 export default Wrapper;
