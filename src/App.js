@@ -6,7 +6,6 @@ import {
   FormattedMessage,
   FormattedDate,
   FormattedNumber,
-  FormattedPlural,
   FormattedTime,
 } from "react-intl";
 
