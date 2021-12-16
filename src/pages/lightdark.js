@@ -32,7 +32,10 @@ const Theme = () => {
             <div>
                 <a 
                     href="/"
-                    style={{ textDecoration: "none" }}
+                    style={{ 
+                        textDecoration: "none",
+                        color: styles.theme.color,
+                    }}
                 >
                     Go to Switch Language
                 </a>
