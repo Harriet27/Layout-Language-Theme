@@ -30,7 +30,7 @@ const Theme = () => {
     return (
         <div style={styles.app}>
             <h1 style={(styles.header, styles.text)}>
-                Have a nice day... DEV!
+                Have a nice day...!
             </h1>
             <h2 style={styles.text}>
                 Current theme is <span style={styles.theme}>{mode}</span> mode
