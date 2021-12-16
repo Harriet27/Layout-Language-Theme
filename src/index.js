@@ -3,13 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {IntlProvider} from 'react-intl';
+import { BrowserRouter } from "react-router-dom";
 import Wrapper from "./components/Wrapper";
+import ThemeProvider from "./provider";
 
 ReactDOM.render(
-    <Wrapper>
-        <App date = {Date.now()}/>
-    </Wrapper>,
+    <BrowserRouter>
+        <ThemeProvider>
+            <Wrapper>
+                <App date={Date.now()} />
+            </Wrapper>
+        </ThemeProvider>
+    </BrowserRouter>,
     document.getElementById('root')
 );
 
