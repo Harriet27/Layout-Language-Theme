@@ -1,4 +1,4 @@
-export const theme = {
+export const themePalette = {
     light: {
         color: "#03dac5",
         backgroundColor: "#ffffff",

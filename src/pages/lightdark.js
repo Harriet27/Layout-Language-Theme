@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { theme } from "../themePallete";
+import { themePalette } from "../themePalette";
 import { ThemeContext } from "../themeProvider";
 import ThemeSwitch from "../themeSwitch";
 
@@ -12,14 +12,14 @@ const getStyles = (mode) => ({
         height: "100%",
         width: "100%",
         padding: 16,
-        backgroundColor: theme[mode].backgroundColor,
+        backgroundColor: themePalette[mode].backgroundColor,
     },
     text: {
         fontWeight: "200",
-        color: theme[mode].color,
+        color: themePalette[mode].color,
     },
     theme: {
-        color: theme[mode].highlight,
+        color: themePalette[mode].highlight,
     },
 });
 
