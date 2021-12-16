@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from "react-router-dom";
 import Wrapper from "./components/Wrapper";
-import ThemeProvider from "./provider";
+import ThemeProvider from "./themeProvider";
 
 ReactDOM.render(
     <BrowserRouter>

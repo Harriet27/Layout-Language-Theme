@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Switch from "react-switch";
 import { IoMdSunny, IoMdMoon } from "react-icons/all";
-import { ThemeContext } from "./provider";
+import { ThemeContext } from "./themeProvider";
 
 const getStyles = (mode) => ({
     switch: {

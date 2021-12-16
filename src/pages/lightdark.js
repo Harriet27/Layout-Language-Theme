@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { theme } from "../theme";
-import { ThemeContext } from "../provider";
+import { theme } from "../themePallete";
+import { ThemeContext } from "../themeProvider";
 import ThemeSwitch from "../themeSwitch";
 
 const getStyles = (mode) => ({
