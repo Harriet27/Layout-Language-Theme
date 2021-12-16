@@ -14,6 +14,14 @@ const Lang = (props) => {
 
     return (
         <div className="App">
+            <div style={{ margin: "10px 0px" }}>
+                <a 
+                    href="/light-dark"
+                    style={{ textDecoration: "none" }}
+                >
+                    Go to Switch Theme
+                </a>
+            </div>
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
 

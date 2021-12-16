@@ -29,6 +29,14 @@ const Theme = () => {
 
     return (
         <div style={styles.app}>
+            <div>
+                <a 
+                    href="/"
+                    style={{ textDecoration: "none" }}
+                >
+                    Go to Switch Language
+                </a>
+            </div>
             <h1 style={(styles.header, styles.text)}>
                 Have a nice day...!
             </h1>
