@@ -6,12 +6,13 @@ const ThemeProvider = ({ children }) => {
     const [mode, setTheme] = useState("light");
 
     const handleSetTheme = (color) => {
-        if (mode === "light") {
-            setTheme(color);
-        } else if (mode === "dark") {
-            setTheme(color);
-        } else if (mode === "blue") {
-            setTheme(color);
+        switch (color) {
+            case "light": 
+                setTheme(color);
+            case "dark":
+                setTheme(color);
+            case "blue":
+                setTheme(color);
         }
     };
 
