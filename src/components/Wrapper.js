@@ -24,7 +24,7 @@ const Wrapper = (props) => {
         setLocale(newLocale);
         if (newLocale === "en") {
             setMessages(English);
-        } else if (newLocale === "id"){
+        } else if (newLocale === "id") {
             setMessages(Indonesian);
         }
     };
