@@ -47,53 +47,59 @@ const ThemeSwitch = () => {
                 {mode.toUpperCase()} Mode
             </span> */}
             <div onChange={handleChangeTheme}>
-                <input type="radio" value="light" name="choose_theme" defaultChecked />
-                <span 
-                    style={{
-                        color: 
-                        mode === "light" 
-                        ? "#fdb813" 
-                        : mode === "dark"
-                        ? "#ffffff"
-                        : mode === "blue"
-                        ? " #06d6a0"
-                        : ""
-                    }}
-                >
-                    Light
-                </span>
+                <label style={{ cursor: "pointer" }}>
+                    <input type="radio" value="light" name="choose_theme" style={{ cursor: "pointer" }} defaultChecked />
+                    <span 
+                        style={{
+                            color: 
+                            mode === "light" 
+                            ? "#fdb813" 
+                            : mode === "dark"
+                            ? "#ffffff"
+                            : mode === "blue"
+                            ? " #06d6a0"
+                            : ""
+                        }}
+                    >
+                        Light
+                    </span>
+                </label>
                 <br />
-                <input type="radio" value="dark" name="choose_theme" /> 
-                <span
-                    style={{
-                        color: 
-                        mode === "light" 
-                        ? "#fdb813" 
-                        : mode === "dark"
-                        ? "#ffffff"
-                        : mode === "blue"
-                        ? " #06d6a0"
-                        : ""
-                    }}
-                >
-                    Dark
-                </span>
+                <label style={{ cursor: "pointer" }}>
+                    <input type="radio" value="dark" name="choose_theme" style={{ cursor: "pointer" }} /> 
+                    <span
+                        style={{
+                            color: 
+                            mode === "light" 
+                            ? "#fdb813" 
+                            : mode === "dark"
+                            ? "#ffffff"
+                            : mode === "blue"
+                            ? " #06d6a0"
+                            : ""
+                        }}
+                    >
+                        Dark
+                    </span>
+                </label>
                 <br />
-                <input type="radio" value="blue" name="choose_theme" /> 
-                <span
-                    style={{
-                        color: 
-                        mode === "light" 
-                        ? "#fdb813" 
-                        : mode === "dark"
-                        ? "#ffffff"
-                        : mode === "blue"
-                        ? " #06d6a0"
-                        : ""
-                    }}
-                >
-                    Blue
-                </span>
+                <label style={{ cursor: "pointer" }}>
+                    <input type="radio" value="blue" name="choose_theme" style={{ cursor: "pointer" }} /> 
+                    <span
+                        style={{
+                            color: 
+                            mode === "light" 
+                            ? "#fdb813" 
+                            : mode === "dark"
+                            ? "#ffffff"
+                            : mode === "blue"
+                            ? " #06d6a0"
+                            : ""
+                        }}
+                    >
+                        Blue
+                    </span>
+                </label>
             </div>
         </div>
     );
