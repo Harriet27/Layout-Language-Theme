@@ -9,7 +9,16 @@ const ThemeProvider = ({ children }) => {
         <ThemeContext.Provider
             value={{
                 mode,
-                setTheme: () => setTheme(mode === "dark" ? "light" : "dark"),
+                // setTheme: () => setTheme(mode === "dark" ? "light" : "dark"),
+                setTheme: (theme) => {
+                    if (mode === "light") {
+                        setTheme(theme);
+                    } else if (mode === "dark") {
+                        setTheme(theme);
+                    } else if (mode === "blue") {
+                        setTheme(theme);
+                    }
+                }
             }}
         >
             {children}
