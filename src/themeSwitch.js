@@ -28,20 +28,6 @@ const ThemeSwitch = () => {
         <div style={{ display: "flex", alignItems: "center" }}>
             {/* <Switch
                 checked={mode === "dark" ? true : false}
-                height={50}
-                width={120}
-                offColor="#1d1f2f"
-                onColor="#FDB813"
-                checkedIcon={
-                    <IoMdSunny style={styles.switch} color="white" className="light" />
-                }
-                uncheckedIcon={
-                    <IoMdMoon style={styles.switch} color="white" className="dark" />
-                }
-                onChange={setTheme}
-            /> */}
-            {/* <Switch
-                checked={mode === "dark" ? true : false}
                 onChange={setTheme}
             />
             &nbsp;&nbsp;&nbsp;

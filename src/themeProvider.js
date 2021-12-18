@@ -16,7 +16,6 @@ const ThemeProvider = ({ children }) => {
         <ThemeContext.Provider
             value={{
                 mode,
-                // setTheme: () => setTheme(mode === "dark" ? "light" : "dark"),
                 setTheme: (theme) => handleSetTheme(theme),
             }}
         >
