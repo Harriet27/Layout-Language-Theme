@@ -1,7 +1,7 @@
-import Lang from "./lang";
-import LightDark from "./lightdark";
+import Language from "./language";
+import Theme from "./theme";
 
 export {
-    Lang,
-    LightDark,
+    Language,
+    Theme,
 };
