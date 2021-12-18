@@ -22,6 +22,8 @@ const ThemeSwitch = () => {
         setTheme(e.target.value);
     };
 
+    console.log("theme mode", mode);
+
     return (
         <div style={{ display: "flex", alignItems: "center" }}>
             {/* <Switch
@@ -48,7 +50,13 @@ const ThemeSwitch = () => {
             </span> */}
             <div onChange={handleChangeTheme}>
                 <label style={{ cursor: "pointer" }}>
-                    <input type="radio" value="light" name="choose_theme" style={{ cursor: "pointer" }} defaultChecked />
+                    <input 
+                        type="radio" 
+                        value="light" 
+                        name="choose_theme" 
+                        style={{ cursor: "pointer" }} 
+                        defaultChecked={ mode === "light" ? true : false } 
+                    />
                     <span 
                         style={{
                             color: 
@@ -57,7 +65,9 @@ const ThemeSwitch = () => {
                             : mode === "dark"
                             ? "#ffffff"
                             : mode === "blue"
-                            ? " #06d6a0"
+                            ? "#06d6a0"
+                            : mode === "red"
+                            ? "#0033cc"
                             : ""
                         }}
                     >
@@ -66,7 +76,13 @@ const ThemeSwitch = () => {
                 </label>
                 <br />
                 <label style={{ cursor: "pointer" }}>
-                    <input type="radio" value="dark" name="choose_theme" style={{ cursor: "pointer" }} /> 
+                    <input 
+                        type="radio" 
+                        value="dark" 
+                        name="choose_theme" 
+                        style={{ cursor: "pointer" }} 
+                        defaultChecked={ mode === "dark" ? true : false } 
+                    /> 
                     <span
                         style={{
                             color: 
@@ -75,7 +91,9 @@ const ThemeSwitch = () => {
                             : mode === "dark"
                             ? "#ffffff"
                             : mode === "blue"
-                            ? " #06d6a0"
+                            ? "#06d6a0"
+                            : mode === "red"
+                            ? "#0033cc"
                             : ""
                         }}
                     >
@@ -84,7 +102,13 @@ const ThemeSwitch = () => {
                 </label>
                 <br />
                 <label style={{ cursor: "pointer" }}>
-                    <input type="radio" value="blue" name="choose_theme" style={{ cursor: "pointer" }} /> 
+                    <input 
+                        type="radio" 
+                        value="blue" 
+                        name="choose_theme" 
+                        style={{ cursor: "pointer" }} 
+                        defaultChecked={ mode === "blue" ? true : false } 
+                    /> 
                     <span
                         style={{
                             color: 
@@ -93,11 +117,39 @@ const ThemeSwitch = () => {
                             : mode === "dark"
                             ? "#ffffff"
                             : mode === "blue"
-                            ? " #06d6a0"
+                            ? "#06d6a0"
+                            : mode === "red"
+                            ? "#0033cc"
                             : ""
                         }}
                     >
                         Blue
+                    </span>
+                </label>
+                <br />
+                <label style={{ cursor: "pointer" }}>
+                    <input 
+                        type="radio" 
+                        value="red" 
+                        name="choose_theme" 
+                        style={{ cursor: "pointer" }} 
+                        defaultChecked={ mode === "red" ? true : false } 
+                    /> 
+                    <span
+                        style={{
+                            color: 
+                            mode === "light" 
+                            ? "#fdb813" 
+                            : mode === "dark"
+                            ? "#ffffff"
+                            : mode === "blue"
+                            ? "#06d6a0"
+                            : mode === "red"
+                            ? "#0033cc"
+                            : ""
+                        }}
+                    >
+                        Red
                     </span>
                 </label>
             </div>

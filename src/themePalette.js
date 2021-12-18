@@ -14,4 +14,9 @@ export const themePalette = {
         backgroundColor: "#3d5a80",
         highlight: "#ffb70",
     },
+    red: {
+        color: "#0099ff",
+        backgroundColor: "#990033",
+        highlight: "#0033cc",
+    },
 };

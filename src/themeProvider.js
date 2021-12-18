@@ -7,11 +7,7 @@ const ThemeProvider = ({ children }) => {
 
     const handleSetTheme = (color) => {
         switch (color) {
-            case "light": 
-                setTheme(color);
-            case "dark":
-                setTheme(color);
-            case "blue":
+            case color: 
                 setTheme(color);
         }
     };
