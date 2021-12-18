@@ -1,7 +1,7 @@
-import Indonesian from "./id.json";
-import English from "./en.json";
+import id from "./id.json";
+import en from "./en.json";
 
 export {
-    Indonesian,
-    English,
+    id,
+    en,
 };

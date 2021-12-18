@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { IntlProvider } from "react-intl";
-import {
-    Indonesian,
-    English,
-} from "../lang";
+import * as languages from "../lang";
 
 export const Context = React.createContext();
 
@@ -11,10 +8,10 @@ const local = navigator.language;
 
 const languageList = {
     id: { 
-        language: Indonesian,
+        language: languages.id,
     },
     en: {
-        language: English,
+        language: languages.en,
     },
 };
 
