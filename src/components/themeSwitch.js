@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "./themeProvider";
+import { ThemeContext } from "../helper/theme/themeProvider";
 // import Switch from "react-switch";
 // import { IoMdSunny, IoMdMoon } from "react-icons/all";
 

@@ -1,21 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
-import Wrapper from "./components/Wrapper";
-import ThemeProvider from "./themeProvider";
+import LanguageProvider from "./helper/language/languageProvider";
+import ThemeProvider from "./helper/theme/themeProvider";
 
 ReactDOM.render(
     <BrowserRouter>
         <ThemeProvider>
-            <Wrapper>
+            <LanguageProvider>
                 <App date={Date.now()} />
-            </Wrapper>
+            </LanguageProvider>
         </ThemeProvider>
     </BrowserRouter>,
-    document.getElementById('root')
+    document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

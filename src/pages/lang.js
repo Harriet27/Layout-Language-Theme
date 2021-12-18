@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import logo from "../logo.svg";
 import "../App.css";
-import { Context } from "../components/Wrapper";
+import LanguageSwitch from "../components/languageSwitch";
+import { Context } from "../helper/language/languageProvider";
 import { FormattedMessage } from "react-intl";
 
 const Lang = (props) => {
@@ -21,17 +22,10 @@ const Lang = (props) => {
                 <img src={logo} className="App-logo" alt="logo" />
 
                 {/* SELECT LANGUAGE */}
-                <select value={context.locale} onChange={context.selectLanguage}>
-                    <option value="en">
-                        English
-                    </option>
-                    <option value="id">
-                        Indonesian
-                    </option>
-                    <option value="ch">
-                        Chinese
-                    </option>
-                </select>
+                <LanguageSwitch 
+                    value={context.locale} 
+                    onChange={context.selectLanguage} 
+                />
                 {/* .SELECT LANGUAGE */}
 
                 {/* CONTENT */}

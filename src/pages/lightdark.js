@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { themePalette } from "../themePalette";
-import { ThemeContext } from "../themeProvider";
-import ThemeSwitch from "../themeSwitch";
+import { themePalette } from "../helper/theme/themePalette";
+import { ThemeContext } from "../helper/theme/themeProvider";
+import ThemeSwitch from "../components/themeSwitch";
 
 const getStyles = (mode) => ({
     header: {

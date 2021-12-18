@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IntlProvider } from "react-intl";
-import * as languages from "../lang";
+import * as languages from "../../languages";
 
 export const Context = React.createContext();
 
