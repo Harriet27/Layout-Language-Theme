@@ -1,31 +1,34 @@
 import React, { useState } from "react";
 import { IntlProvider } from "react-intl";
-import Indonesian from "../lang/id.json";
-import English from "../lang/en.json";
+import {
+    Indonesian,
+    English,
+} from "../lang";
 
 export const Context = React.createContext();
 
 const local = navigator.language;
 
-let language;
-if (local === "en") {
-    language = English;
-} else if (local === "id") {
-    language = Indonesian;
-}
+const languageList = {
+    id: { 
+        language: Indonesian,
+    },
+    en: {
+        language: English,
+    },
+};
 
 const Wrapper = (props) => {
     const [locale, setLocale] = useState(local);
 
-    const [messages, setMessages] = useState(language);
+    const [messages, setMessages] = useState(languageList);
 
     function selectLanguage(e) {
         const newLocale = e.target.value;
         setLocale(newLocale);
-        if (newLocale === "en") {
-            setMessages(English);
-        } else if (newLocale === "id") {
-            setMessages(Indonesian);
+        switch (newLocale) {
+            case newLocale:
+                setMessages(languageList[newLocale]["language"]);
         }
     };
 

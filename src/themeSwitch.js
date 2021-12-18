@@ -55,7 +55,7 @@ const ThemeSwitch = () => {
                         value="light" 
                         name="choose_theme" 
                         style={{ cursor: "pointer" }} 
-                        defaultChecked={ mode === "light" ? true : false } 
+                        defaultChecked={mode === "light" ? true : false} 
                     />
                     <span 
                         style={{
@@ -81,7 +81,7 @@ const ThemeSwitch = () => {
                         value="dark" 
                         name="choose_theme" 
                         style={{ cursor: "pointer" }} 
-                        defaultChecked={ mode === "dark" ? true : false } 
+                        defaultChecked={mode === "dark" ? true : false} 
                     /> 
                     <span
                         style={{
@@ -107,7 +107,7 @@ const ThemeSwitch = () => {
                         value="blue" 
                         name="choose_theme" 
                         style={{ cursor: "pointer" }} 
-                        defaultChecked={ mode === "blue" ? true : false } 
+                        defaultChecked={mode === "blue" ? true : false} 
                     /> 
                     <span
                         style={{
@@ -133,7 +133,7 @@ const ThemeSwitch = () => {
                         value="red" 
                         name="choose_theme" 
                         style={{ cursor: "pointer" }} 
-                        defaultChecked={ mode === "red" ? true : false } 
+                        defaultChecked={mode === "red" ? true : false} 
                     /> 
                     <span
                         style={{
