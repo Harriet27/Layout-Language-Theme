@@ -3,16 +3,16 @@ import { ThemeContext } from "../helper/theme/themeProvider";
 // import Switch from "react-switch";
 // import { IoMdSunny, IoMdMoon } from "react-icons/all";
 
-const getStyles = (mode) => ({
-    switch: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100%",
-        fontSize: 35,
-        paddingLeft: mode === "dark" ? 30 : 10,
-    },
-});
+// const getStyles = (mode) => ({
+//     switch: {
+//         display: "flex",
+//         justifyContent: "center",
+//         alignItems: "center",
+//         height: "100%",
+//         fontSize: 35,
+//         paddingLeft: mode === "dark" ? 30 : 10,
+//     },
+// });
 
 const ThemeSwitch = () => {
     const { setTheme, mode } = useContext(ThemeContext);
