@@ -12,7 +12,7 @@ const Lang = (props) => {
         <div className="App">
             <div style={{ margin: "10px 0px" }}>
                 <a 
-                    href="/light-dark"
+                    href="/theme"
                     style={{ textDecoration: "none" }}
                 >
                     Go to Switch Theme

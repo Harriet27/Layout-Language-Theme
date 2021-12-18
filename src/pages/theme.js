@@ -31,7 +31,7 @@ const Theme = () => {
         <div style={styles.app}>
             <div>
                 <a 
-                    href="/"
+                    href="/language"
                     style={{ 
                         textDecoration: "none",
                         color: styles.theme.color,
