@@ -1,5 +1,5 @@
 {
-  "app.header" : "Ubah <code>{fileName}</code> dan simpan untuk mengubahnya" ,
+  "app.header" : "Ubah <code>{fileName}</code> dan simpan untuk mengubahnya",
   "app.content" : "Belajar React" ,
   "app.author": "Tutorial dibawakan oleh A.N.H"
 }

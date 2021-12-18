@@ -6,26 +6,17 @@ export const Context = React.createContext();
 
 const local = navigator.language;
 
-const languageList = {
-    id: { 
-        language: languages.id,
-    },
-    en: {
-        language: languages.en,
-    },
-};
-
 const Wrapper = (props) => {
     const [locale, setLocale] = useState(local);
 
-    const [messages, setMessages] = useState(languageList);
+    const [messages, setMessages] = useState(languages);
 
     function selectLanguage(e) {
         const newLocale = e.target.value;
         setLocale(newLocale);
         switch (newLocale) {
             case newLocale:
-                setMessages(languageList[newLocale]["language"]);
+                setMessages(languages[newLocale]);
         }
     };
 

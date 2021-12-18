@@ -2,12 +2,7 @@ import React, { useContext } from "react";
 import logo from "../logo.svg";
 import "../App.css";
 import { Context } from "../components/Wrapper";
-import { 
-  FormattedMessage,
-  FormattedDate,
-  FormattedNumber,
-  FormattedTime,
-} from "react-intl";
+import { FormattedMessage } from "react-intl";
 
 const Lang = (props) => {
     const context = useContext(Context);
@@ -27,11 +22,14 @@ const Lang = (props) => {
 
                 {/* SELECT LANGUAGE */}
                 <select value={context.locale} onChange={context.selectLanguage}>
-                    <option value= "en">
+                    <option value="en">
                         English
                     </option>
-                    <option value= "id">
+                    <option value="id">
                         Indonesian
+                    </option>
+                    <option value="ch">
+                        Chinese
                     </option>
                 </select>
                 {/* .SELECT LANGUAGE */}
@@ -59,33 +57,6 @@ const Lang = (props) => {
                     id="app.author"
                     defaultMessage="Tutorial brought to you by A.N.H"
                     values={{ blogName: "A.N.H" }}
-                />
-                <br/><br/>
-                <FormattedDate
-                    value={props.date}
-                    year="numeric"
-                    month= "long"
-                    day="numeric"
-                    weekday="long"
-                />
-                <br/>
-                <FormattedNumber
-                    value={20.42}
-                    style="currency"
-                    currencyDisplay="symbol"
-                    currency="USD"
-                />
-                <br/>
-                <FormattedNumber
-                    value={10000}
-                />
-                <br/>
-                <FormattedTime
-                    value={new Date()}
-                    hour="numeric"
-                    minute="numeric"
-                    second="numeric"
-                    timeZoneName="long"
                 />
                 {/* .CONTENT */}
 

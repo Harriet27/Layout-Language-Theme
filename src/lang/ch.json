@@ -1,0 +1,5 @@
+{
+    "app.header" : "编辑 <code>{fileName}</code> 并保存以重新加载",
+    "app.content" : "学习 React" ,
+    "app.author": "由A.N.H编写的教程"
+}
