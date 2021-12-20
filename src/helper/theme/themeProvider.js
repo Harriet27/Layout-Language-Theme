@@ -10,6 +10,9 @@ const ThemeProvider = ({ children }) => {
         switch (color) {
             case color: 
                 setTheme(color);
+                break;
+            default:
+                setTheme(color);
         }
     };
 

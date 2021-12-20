@@ -18,6 +18,9 @@ const Wrapper = (props) => {
         switch (newLocale) {
             case newLocale:
                 setMessages(languages[newLocale]);
+                break;
+            default:
+                setMessages(languages[newLocale]);
         }
     };
 
