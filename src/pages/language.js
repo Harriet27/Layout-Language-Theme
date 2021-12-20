@@ -50,7 +50,7 @@ const Lang = (props) => {
                 <p>
                     <FormattedMessage
                         id="app.header"
-                        defaultMessage="Edit <code>src/App.js</code> and save to reload"
+                        defaultMessage="Edit <strong>src/App.js</strong> and save to reload"
                         values={{ fileName: "src/App.js", strong: (word) => <strong>{word}</strong> }}
                     />
                 </p>
