@@ -73,8 +73,8 @@ const Theme = () => {
             <h2 style={styles.text}>
                 <FormattedMessage
                     id="app.theme"
-                    defaultMessage={`Current theme is ${mode} mode`}
-                    value={{theme: mode}}
+                    defaultMessage={"Current theme is <strong>" + mode + "</strong> mode"}
+                    values={{ theme: mode, strong: (word) => <strong>{word}</strong> }}
                 />
             </h2>
             <ThemeSwitch />

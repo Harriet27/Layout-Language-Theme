@@ -3,5 +3,5 @@
   "app.content" : "Learn React" ,
   "app.channel.plug": "Tutorial brought to you by {blogName}",
   "app.greeting": "Have a nice day...!",
-  "app.theme": "Current theme is {theme} mode"
+  "app.theme": "Current theme is <strong>{theme}</strong> mode"
 }
