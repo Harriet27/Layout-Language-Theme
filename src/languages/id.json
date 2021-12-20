@@ -1,5 +1,7 @@
 {
   "app.header" : "Ubah <code>{fileName}</code> dan simpan untuk mengubahnya",
   "app.content" : "Belajar React" ,
-  "app.author": "Tutorial dibawakan oleh A.N.H"
+  "app.author": "Tutorial dibawakan oleh A.N.H",
+  "app.greeting": "Semoga harimu menyenangkan...!",
+  "app.theme": "Tema saat ini adalah mode {theme}"
 }

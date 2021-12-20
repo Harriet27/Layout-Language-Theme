@@ -10,16 +10,34 @@ const Lang = (props) => {
 
     return (
         <div className="App">
-            <div style={{ margin: "10px 0px" }}>
-                <a 
-                    href="/theme"
-                    style={{ textDecoration: "none" }}
-                >
-                    Go to Switch Theme
-                </a>
+            <div>
+                <div>
+                    <a 
+                        href="/language"
+                        style={{ textDecoration: "none" }}
+                    >
+                        Go to Switch Language
+                    </a>
+                </div>
+                <div>
+                    <a 
+                        href="/theme"
+                        style={{ textDecoration: "none" }}
+                    >
+                        Go to Switch Theme
+                    </a>
+                </div>
+                <div>
+                    <a 
+                        href="/both-lang-theme"
+                        style={{ textDecoration: "none" }}
+                    >
+                        Go to Switch Both Language Theme
+                    </a>
+                </div>
             </div>
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={logo} className="App-logo" alt="logo" style={{ height: "200px" }} />
 
                 {/* SELECT LANGUAGE */}
                 <LanguageSwitch 
