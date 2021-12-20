@@ -26,7 +26,7 @@ const getStyles = (mode) => ({
     },
 });
 
-const Theme = () => {
+const LanguangeTheme = () => {
     const context = useContext(Context);
     const { mode } = useContext(ThemeContext);
     
@@ -82,4 +82,4 @@ const Theme = () => {
     );
 };
 
-export default Theme;
+export default LanguangeTheme;
