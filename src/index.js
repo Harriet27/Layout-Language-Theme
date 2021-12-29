@@ -6,6 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 import LanguageProvider from "./helper/language/languageProvider";
 import ThemeProvider from "./helper/theme/themeProvider";
+import "antd/dist/antd.css"; // "antd/dist/antd.less" or "antd/dist/antd.css";
 
 ReactDOM.render(
     <BrowserRouter>
