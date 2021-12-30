@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
-const Product = ({ match }) => {
+const Product = () => {
+    const params = useParams();
+
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -10,7 +13,7 @@ const Product = ({ match }) => {
     }, []);
 
     const fetchProduct = () => {
-        axios.get(`https://shoppingapiacme.herokuapp.com/shopping/?id=${match.params.id}`)
+        axios.get(`https://shoppingapiacme.herokuapp.com/shopping/?id=${params.id}`)
         .then((res) => {
             setData(res.data);
         })
