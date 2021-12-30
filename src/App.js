@@ -5,13 +5,15 @@ import {
   Theme,
   BothLT,
   antd,
+  Product,
+  FeaturedProducts,
 } from "./pages";
 
 const App = () => {
   return (
     <div>
       <Switch>
-        <Route 
+        <Route
           exact
           path="/"
           render={() => {
@@ -24,6 +26,8 @@ const App = () => {
         <Route path="/theme" component={Theme} />
         <Route path="/both-lang-theme" component={BothLT} />
         <Route path="/antd" component={antd} />
+        <Route exact path='/featured-products' component={FeaturedProducts} />
+        <Route exact path='/product/:id' component={Product} />
       </Switch>
     </div>
   );
