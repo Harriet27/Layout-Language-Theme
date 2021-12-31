@@ -1,12 +1,13 @@
 import React from "react";
-import { useRoutes } from "react-router-dom";
+import { useRoutes, Navigate } from "react-router-dom";
 import {
-  Language,
-  Theme,
-  BothLT,
-  Antd,
-  FeaturedProducts,
-  Product,
+    NotFound404,
+    Language,
+    Theme,
+    BothLT,
+    Antd,
+    FeaturedProducts,
+    Product,
 } from "./pages";
 
 export default function Routes() {
@@ -14,6 +15,7 @@ export default function Routes() {
         {
             path: "/library",
             children: [
+                { element: <Navigate to="/library/language" replace /> },
                 { path: "language", element: <Language /> },
                 { path: "theme", element: <Theme /> },
                 { path: "both", element: <BothLT /> },
@@ -32,5 +34,12 @@ export default function Routes() {
                 { path: "product/:id", element: <Product /> },
             ],
         },
+        {
+            path: "/",
+            children: [
+                { path: "404", element: <NotFound404 /> },
+            ],
+        },
+        { path: '*', element: <Navigate to="/404" replace /> },
     ]);
 };
