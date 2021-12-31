@@ -28,7 +28,9 @@ const FeaturedProducts = () => {
                         <img src={product.image} alt='' />
                         <h3>{product.brand}</h3>
                         <p>{product.item}</p>
-                        <Link to={`/product/${product.id}`}>View</Link>
+                        <Link to={`/dynamic-routing/product/${product.id}`}>
+                            View
+                        </Link>
                     </div>
                 ))}
             </div>

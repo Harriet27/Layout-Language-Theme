@@ -32,7 +32,7 @@ const Theme = () => {
             <div>
                 <div>
                     <a 
-                        href="/language"
+                        href="/library/language"
                         style={{ textDecoration: "none" }}
                     >
                         Go to Switch Language
@@ -40,7 +40,7 @@ const Theme = () => {
                 </div>
                 <div>
                     <a 
-                        href="/theme"
+                        href="/library/theme"
                         style={{ textDecoration: "none" }}
                     >
                         Go to Switch Theme
@@ -48,7 +48,7 @@ const Theme = () => {
                 </div>
                 <div>
                     <a 
-                        href="/both-lang-theme"
+                        href="/library/both"
                         style={{ textDecoration: "none" }}
                     >
                         Go to Switch Both Language Theme

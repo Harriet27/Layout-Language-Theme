@@ -45,7 +45,7 @@ const Product = () => {
                 );
             })}
             <div className='back'>
-                <Link to='/featured-products'>
+                <Link to='/dynamic-routing/featured-products'>
                     FEATURED PRODUCTS
                 </Link>
             </div>
