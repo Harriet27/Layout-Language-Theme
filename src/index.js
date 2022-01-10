@@ -8,18 +8,25 @@ import LanguageProvider from "./helper/language/languageProvider";
 import ThemeProvider from "./helper/theme/themeProvider";
 import "antd/dist/antd.css"; // "antd/dist/antd.less" or "antd/dist/antd.css";
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { Provider } from 'react-redux';
+import ReduxThunk from 'redux-thunk';
+import Reducers from './redux/reducers';
+import { applyMiddleware, createStore } from "redux";
 
-const queryClient = new QueryClient(); 
+const queryClient = new QueryClient();
+const globalStore = createStore(Reducers, {}, applyMiddleware(ReduxThunk));
 
 ReactDOM.render(
     <BrowserRouter>
-        <ThemeProvider>
-            <LanguageProvider>
-                <QueryClientProvider client={queryClient}>
-                    <App date={Date.now()} />
-                </QueryClientProvider>
-            </LanguageProvider>
-        </ThemeProvider>
+        <Provider store={globalStore}>
+            <ThemeProvider>
+                <LanguageProvider>
+                    <QueryClientProvider client={queryClient}>
+                        <App date={Date.now()} />
+                    </QueryClientProvider>
+                </LanguageProvider>
+            </ThemeProvider>
+        </Provider>
     </BrowserRouter>,
     document.getElementById("root")
 );
