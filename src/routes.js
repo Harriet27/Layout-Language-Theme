@@ -8,6 +8,7 @@ const BothLT = lazy(() => import("./pages/bothLT"));
 const Antd = lazy(() => import("./pages/antd"));
 const FeaturedProducts = lazy(() => import("./pages/featuredProducts"));
 const Product = lazy(() => import("./pages/products"));
+const ReactQuery = lazy(() => import("./pages/reactQuery"));
 
 export default function Routes() {
     return useRoutes([
@@ -36,6 +37,14 @@ export default function Routes() {
                     element: (
                         <Suspense fallback={<div>Loading...</div>}>
                             <BothLT />
+                        </Suspense>
+                    ),
+                },
+                {
+                    path: "react-query",
+                    element: (
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <ReactQuery />
                         </Suspense>
                     ),
                 },

@@ -7,12 +7,17 @@ import { BrowserRouter } from "react-router-dom";
 import LanguageProvider from "./helper/language/languageProvider";
 import ThemeProvider from "./helper/theme/themeProvider";
 import "antd/dist/antd.css"; // "antd/dist/antd.less" or "antd/dist/antd.css";
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient(); 
 
 ReactDOM.render(
     <BrowserRouter>
         <ThemeProvider>
             <LanguageProvider>
-                <App date={Date.now()} />
+                <QueryClientProvider client={queryClient}>
+                    <App date={Date.now()} />
+                </QueryClientProvider>
             </LanguageProvider>
         </ThemeProvider>
     </BrowserRouter>,
