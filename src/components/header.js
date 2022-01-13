@@ -14,8 +14,8 @@ const header = () => {
                 </a>
             </div>
             <div>
-                <a href="/library/both">
-                    /library/both
+                <a href="/library/language-n-theme">
+                    /library/language-n-theme
                 </a>
             </div>
             <div>

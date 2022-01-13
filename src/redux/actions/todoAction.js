@@ -8,7 +8,7 @@ export const getAllTodos = () => {
             type: t.todo_start,
         });
         try {
-            let res = await Axios.post(`${url.todo_api_url}`);
+            let res = await Axios.post(url.todo_api_url, {});
             dispatch({
                 type: t.todo_success,
                 payload: res.data,

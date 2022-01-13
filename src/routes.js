@@ -47,7 +47,7 @@ export default function Routes() {
                     ),
                 },
                 {
-                    path: "both",
+                    path: "language-n-theme",
                     element: (
                         <Suspense fallback={<div>Loading...</div>}>
                             <BothLT />

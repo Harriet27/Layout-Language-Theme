@@ -28,9 +28,15 @@ const ReactQuery = () => {
             {status === "success" && (
                 data.map(val => (
                     <div style={styles.card}>
-                        <div style={styles.txt}>Id: {val.id}</div>
-                        <div style={styles.txt}>Title: {val.title}</div>
-                        <div style={styles.txt}>Completed: {val.completed ? "Done" : "Unfinished"}</div>
+                        <div style={styles.txt}>
+                            Id: {val.id}
+                        </div>
+                        <div style={styles.txt}>
+                            Title: {val.title}
+                        </div>
+                        <div style={styles.txt}>
+                            Completed: {val.completed ? "Done" : "Unfinished"}
+                        </div>
                     </div>
                 ))
             )}
