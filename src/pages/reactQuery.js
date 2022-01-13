@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import Header from "../components/header";
 
 const fetchPlanets = async() => {
-    const res = await fetch('http://swapi.dev/api/planets');
+    const res = await fetch('https://jsonplaceholder.typicode.com/todos');
     return res.json();
 };
 
@@ -26,11 +26,11 @@ const ReactQuery = () => {
 
             {/* Success */}
             {status === "success" && (
-                data.results.map(planet => (
+                data.map(val => (
                     <div style={styles.card}>
-                        <div style={styles.txt}><b>{planet.name}</b></div>
-                        <div style={styles.txt}>Population: {planet.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</div>
-                        <div style={styles.txt}>Terrain: {planet.terrain}</div>
+                        <div style={styles.txt}>Id: {val.id}</div>
+                        <div style={styles.txt}>Title: {val.title}</div>
+                        <div style={styles.txt}>Completed: {val.completed ? "Done" : "Unfinished"}</div>
                     </div>
                 ))
             )}
@@ -41,13 +41,11 @@ const ReactQuery = () => {
 
 const styles = {
     container: {
-        backgroundColor: '#1d1c1d',
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
     },
     header: {
-        color: '#f5e100',
         fontSize: '2rem',
         fontWeight: 'bold',
         marginLeft: '1rem',
