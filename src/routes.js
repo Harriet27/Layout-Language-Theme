@@ -13,6 +13,20 @@ const ReactQuery = lazy(() => import("./pages/reactQuery"));
 export default function Routes() {
     return useRoutes([
         {
+            path: "/",
+            element: <Navigate to="/library/language" replace />,
+            children: [
+                {
+                    path: "404",
+                    element: (
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <NotFound404 />
+                        </Suspense>
+                    ),
+                },
+            ],
+        },
+        {
             path: "/library",
             children: [
                 { element: <Navigate to="/library/language" replace /> },
@@ -79,19 +93,6 @@ export default function Routes() {
                     element: (
                         <Suspense fallback={<div>Loading...</div>}>
                             <Product />
-                        </Suspense>
-                    ),
-                },
-            ],
-        },
-        {
-            path: "/",
-            children: [
-                {
-                    path: "404",
-                    element: (
-                        <Suspense fallback={<div>Loading...</div>}>
-                            <NotFound404 />
                         </Suspense>
                     ),
                 },

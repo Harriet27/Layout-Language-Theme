@@ -4,38 +4,14 @@ import "../App.css";
 import LanguageSwitch from "../components/languageSwitch";
 import { Context } from "../helper/language/languageProvider";
 import { FormattedMessage } from "react-intl";
+import Header from "../components/header";
 
 const Lang = (props) => {
     const context = useContext(Context);
 
     return (
         <div className="App">
-            <div>
-                <div>
-                    <a 
-                        href="/library/language"
-                        style={{ textDecoration: "none" }}
-                    >
-                        Go to Switch Language
-                    </a>
-                </div>
-                <div>
-                    <a 
-                        href="/library/theme"
-                        style={{ textDecoration: "none" }}
-                    >
-                        Go to Switch Theme
-                    </a>
-                </div>
-                <div>
-                    <a 
-                        href="/library/both"
-                        style={{ textDecoration: "none" }}
-                    >
-                        Go to Switch Both Language Theme
-                    </a>
-                </div>
-            </div>
+            <Header />
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" style={{ height: "200px" }} />
 

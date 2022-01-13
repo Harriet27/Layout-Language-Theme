@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import Header from "../components/header";
 
 const fetchPlanets = async() => {
     const res = await fetch('http://swapi.dev/api/planets');
@@ -11,6 +12,8 @@ const ReactQuery = () => {
 
     return (
         <div style={styles.container}>
+            <Header />
+
             <h1 style={styles.header}>
                 React Query
             </h1>

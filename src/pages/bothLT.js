@@ -5,6 +5,7 @@ import ThemeSwitch from "../components/themeSwitch";
 import { Context } from "../helper/language/languageProvider";
 import LanguageSwitch from "../components/languageSwitch";
 import { FormattedMessage } from "react-intl";
+import Header from "../components/header";
 
 const getStyles = (mode) => ({
     header: {
@@ -34,32 +35,7 @@ const LanguangeTheme = () => {
 
     return (
         <div style={styles.app}>
-            <div style={{ marginBottom: "20px" }}>
-                <div>
-                    <a 
-                        href="/library/language"
-                        style={{ textDecoration: "none" }}
-                    >
-                        Go to Switch Language
-                    </a>
-                </div>
-                <div>
-                    <a 
-                        href="/library/theme"
-                        style={{ textDecoration: "none" }}
-                    >
-                        Go to Switch Theme
-                    </a>
-                </div>
-                <div>
-                    <a 
-                        href="/library/both"
-                        style={{ textDecoration: "none" }}
-                    >
-                        Go to Switch Both Language Theme
-                    </a>
-                </div>
-            </div>
+            <Header />
             <LanguageSwitch 
                 value={context.locale} 
                 onChange={context.selectLanguage} 
