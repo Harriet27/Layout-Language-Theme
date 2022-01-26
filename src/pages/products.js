@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
 
 const Product = () => {
-    const params = useParams();
     const location = useLocation();
-    console.log(location);
 
     const [data, setData] = useState([]);
 
@@ -14,8 +11,10 @@ const Product = () => {
         fetchProduct();
     }, []);
 
+    const id = location.pathname.split('/')[location.pathname.split('/').length-1];
+
     const fetchProduct = () => {
-        axios.get(`https://shoppingapiacme.herokuapp.com/shopping/?id=${params.id}`)
+        axios.get(`https://shoppingapiacme.herokuapp.com/shopping/?id=${id}`)
         .then((res) => {
             setData(res.data);
         })
