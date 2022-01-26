@@ -9,6 +9,7 @@ const Antd = lazy(() => import("./pages/antd"));
 const FeaturedProducts = lazy(() => import("./pages/featuredProducts"));
 const Product = lazy(() => import("./pages/products"));
 const ReactQuery = lazy(() => import("./pages/reactQuery"));
+const Experiment = lazy(() => import('./pages/experiment'));
 
 export default function Routes() {
     return useRoutes([
@@ -59,6 +60,14 @@ export default function Routes() {
                     element: (
                         <Suspense fallback={<div>Loading...</div>}>
                             <ReactQuery />
+                        </Suspense>
+                    ),
+                },
+                {
+                    path: "experiment",
+                    element: (
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Experiment />
                         </Suspense>
                     ),
                 },
