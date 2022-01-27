@@ -1,24 +1,24 @@
 import * as t from "../types";
 
 const INTITAL_STATE = {
-    todoList: [],
+    photosList: [],
     loading : false,
 };
 
-export const todoReducer = (state =  INTITAL_STATE , action) => {
+export const photoReducer = (state =  INTITAL_STATE , action) => {
     switch (action.type) {
-        case t.todo_start:
+        case t.photos_start:
             return {
                 ...state,
                 loading: true,
             };
-        case t.todo_success:
+        case t.photos_success:
             return {
                 ...state,
-                todoList: action.payload,
+                photosList: action.payload,
                 loading: false,
             };
-        case t.todo_failed:
+        case t.photos_failed:
             return {
                 ...state,
                 loading: false,

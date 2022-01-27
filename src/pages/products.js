@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import MainLayout from "../components/Layouts/MainLayout";
+import "../App.css";
 
-const Product = () => {
-    const location = useLocation();
-
-    const [data, setData] = useState([]);
+const FeaturedProducts = () => {
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetchProduct();
+        fetchProducts();
     }, []);
 
-    const id = location.pathname.split('/')[location.pathname.split('/').length-1];
-
-    const fetchProduct = () => {
-        axios.get(`https://shoppingapiacme.herokuapp.com/shopping/?id=${id}`)
+    const fetchProducts = () => {
+        axios.get('https://shoppingapiacme.herokuapp.com/shopping')
         .then((res) => {
-            setData(res.data);
+            setProducts(res.data);
         })
         .catch((err) => {
             console.log(err);
@@ -24,34 +22,22 @@ const Product = () => {
     };
 
     return (
-        <div>
-            {data.map((item) => {
-                return (
-                    <div className='product-container' key={item.id}>
-                        <div>
-                            <img className='prod-image' src={item.image} alt='' />
-                        </div>
-                        <div>
-                            <h1 className='brand'>{item.brand}</h1>
-                            <h2>{item.item}</h2>
-                            <p>{item.description}</p>
-                            <p>
-                                <strong>Price:</strong> {item.price}
-                            </p>
-                            <p>
-                                <strong>Color:</strong> {item.color}
-                            </p>
-                        </div>
+        <MainLayout>
+            <h1>Featured Products</h1>
+            <div className='item-container'>
+                {products.map((product) => (
+                    <div className='card' key={product.id}>
+                        <img src={product.image} alt='' />
+                        <h3>{product.brand}</h3>
+                        <p>{product.item}</p>
+                        <Link to={`/dynamic-routing/products/${product.id}`}>
+                            View
+                        </Link>
                     </div>
-                );
-            })}
-            <div className='back'>
-                <Link to='/dynamic-routing/featured-products'>
-                    FEATURED PRODUCTS
-                </Link>
+                ))}
             </div>
-        </div>
+        </MainLayout>
     );
 };
 
-export default Product;
+export default FeaturedProducts;

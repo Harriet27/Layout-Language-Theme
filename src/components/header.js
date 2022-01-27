@@ -35,7 +35,12 @@ const header = () => {
             </div>
             <div>
                 <a href="/dynamic-routing/featured-products">
-                    /dynamic-routing/featured-products
+                    /dynamic-routing/products
+                </a>
+            </div>
+            <div>
+                <a href="/dynamic-routing/photos">
+                    /dynamic-routing/photos
                 </a>
             </div>
         </React.Fragment>

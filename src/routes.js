@@ -6,10 +6,11 @@ const Language = lazy(() => import("./pages/language"));
 const Theme = lazy(() => import("./pages/theme"));
 const BothLT = lazy(() => import("./pages/bothLT"));
 const Antd = lazy(() => import("./pages/antd"));
-const FeaturedProducts = lazy(() => import("./pages/featuredProducts"));
-const Product = lazy(() => import("./pages/products"));
+const Products = lazy(() => import("./pages/products"));
+const ProductDetail = lazy(() => import("./pages/productsDetail"));
 const ReactQuery = lazy(() => import("./pages/reactQuery"));
-const Experiment = lazy(() => import('./pages/experiment'));
+const Experiment = lazy(() => import("./pages/experiment"));
+const Photos = lazy(() => import("./pages/photos"));
 
 export default function Routes() {
     return useRoutes([
@@ -90,25 +91,33 @@ export default function Routes() {
             path: "/dynamic-routing",
             children: [
                 {
-                    path: "featured-products",
+                    path: "products",
                     element: (
                         <Suspense fallback={<div>Loading...</div>}>
-                            <FeaturedProducts />
+                            <Products />
                         </Suspense>
                     ),
                 },
                 {
-                    path: "product/:id",
+                    path: "products/:id",
                     element: (
                         <Suspense fallback={<div>Loading...</div>}>
-                            <Product />
+                            <ProductDetail />
+                        </Suspense>
+                    ),
+                },
+                {
+                    path: "photos",
+                    element: (
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Photos />
                         </Suspense>
                     ),
                 },
             ],
         },
         {
-            path: '*',
+            path: "*",
             element: <Navigate to="/404" replace />,
         },
     ]);
