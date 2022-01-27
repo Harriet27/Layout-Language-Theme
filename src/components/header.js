@@ -34,7 +34,7 @@ const header = () => {
                 </a>
             </div>
             <div>
-                <a href="/dynamic-routing/featured-products">
+                <a href="/dynamic-routing/products">
                     /dynamic-routing/products
                 </a>
             </div>
