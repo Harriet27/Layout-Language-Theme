@@ -36,6 +36,7 @@ const LanguangeTheme = () => {
     return (
         <div style={styles.app}>
             <Header />
+            <br />
             <LanguageSwitch 
                 value={context.locale} 
                 onChange={context.selectLanguage} 

@@ -4,14 +4,13 @@ import "../App.css";
 import LanguageSwitch from "../components/languageSwitch";
 import { Context } from "../helper/language/languageProvider";
 import { FormattedMessage } from "react-intl";
-import Header from "../components/header";
+import MainLayout from "../components/Layouts/MainLayout";
 
 const Lang = (props) => {
     const context = useContext(Context);
 
     return (
-        <div className="App">
-            <Header />
+        <MainLayout>
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" style={{ height: "200px" }} />
 
@@ -47,9 +46,8 @@ const Lang = (props) => {
                     values={{ blogName: "A.N.H" }}
                 />
                 {/* .CONTENT */}
-
             </header>
-        </div>
+        </MainLayout>
     );
 };
 

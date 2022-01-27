@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Header from "../components/header";
+import MainLayout from "../components/Layouts/MainLayout";
 import "../App.css";
 
 const FeaturedProducts = () => {
@@ -22,8 +22,7 @@ const FeaturedProducts = () => {
     };
 
     return (
-        <div>
-            <Header />
+        <MainLayout>
             <h1>Featured Products</h1>
             <div className='item-container'>
                 {products.map((product) => (
@@ -37,7 +36,7 @@ const FeaturedProducts = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </MainLayout>
     );
 };
 

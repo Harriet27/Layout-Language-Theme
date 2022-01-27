@@ -1,13 +1,12 @@
 import React from 'react';
+import MainLayout from "../components/Layouts/MainLayout";
 import Button from '../atomics/atoms/Button';
-import Header from "../components/header";
 
 const TesAntd = () => {
   return (
-    <div>
-      <Header />
+    <MainLayout> 
       <Button name='apa ya' type='primary' />
-    </div>
+    </MainLayout>
   );
 };
 
