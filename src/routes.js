@@ -1,7 +1,12 @@
 import React, { lazy, Suspense } from "react";
 import { useRoutes, Navigate } from "react-router-dom";
+import Loader from "./components/loader";
 
-const NotFound404 = lazy(() => import("./pages/404"));
+const NotFound404 = lazy(() => {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(import('./pages/404')), 1000);
+    });
+});
 const Language = lazy(() => import("./pages/language"));
 const Theme = lazy(() => import("./pages/theme"));
 const BothLT = lazy(() => import("./pages/bothLT"));
@@ -24,7 +29,7 @@ export default function Routes() {
                 {
                     path: "404",
                     element: (
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<Loader />}>
                             <NotFound404 />
                         </Suspense>
                     ),
@@ -37,7 +42,7 @@ export default function Routes() {
                 {
                     path: "language",
                     element: (
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<Loader />}>
                             <Language />
                         </Suspense>
                     ),
@@ -45,7 +50,7 @@ export default function Routes() {
                 {
                     path: "theme",
                     element: (
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<Loader />}>
                             <Theme />
                         </Suspense>
                     ),
@@ -53,7 +58,7 @@ export default function Routes() {
                 {
                     path: "language-n-theme",
                     element: (
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<Loader />}>
                             <BothLT />
                         </Suspense>
                     ),
@@ -61,7 +66,7 @@ export default function Routes() {
                 {
                     path: "react-query",
                     element: (
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<Loader />}>
                             <ReactQuery />
                         </Suspense>
                     ),
@@ -69,7 +74,7 @@ export default function Routes() {
                 {
                     path: "experiment",
                     element: (
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<Loader />}>
                             <Experiment />
                         </Suspense>
                     ),
@@ -82,7 +87,7 @@ export default function Routes() {
                 {
                     path: "antd",
                     element: (
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<Loader />}>
                             <Antd />
                         </Suspense>
                     ),
@@ -95,7 +100,7 @@ export default function Routes() {
                 {
                     path: "products",
                     element: (
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<Loader />}>
                             <Products />
                         </Suspense>
                     ),
@@ -103,7 +108,7 @@ export default function Routes() {
                 {
                     path: "products/:id",
                     element: (
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<Loader />}>
                             <ProductDetail />
                         </Suspense>
                     ),
@@ -111,7 +116,7 @@ export default function Routes() {
                 {
                     path: "photos",
                     element: (
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<Loader />}>
                             <Photos />
                         </Suspense>
                     ),
