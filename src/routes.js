@@ -17,6 +17,9 @@ export default function Routes() {
         {
             path: "/",
             element: <Navigate to="/library/language" replace />,
+        },
+        {
+            path: "/error",
             children: [
                 {
                     path: "404",
@@ -31,7 +34,6 @@ export default function Routes() {
         {
             path: "/library",
             children: [
-                { element: <Navigate to="/library/language" replace /> },
                 {
                     path: "language",
                     element: (
@@ -118,7 +120,7 @@ export default function Routes() {
         },
         {
             path: "*",
-            element: <Navigate to="/404" replace />,
+            element: <Navigate to="/error/404" replace />,
         },
     ]);
 };
