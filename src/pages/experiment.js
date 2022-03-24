@@ -3,23 +3,38 @@ import MainLayout from "../components/Layouts/MainLayout";
 import "../App.css";
 
 const Experiment = () => {
-    const [inputValue, setInputValue] = useState("");
-    const previousInputValue = useRef("");
+    const [password, setPassword] = useState("");
+    const [strength, setStrength] = useState("");
 
-    useEffect(() => {
-        previousInputValue.current = inputValue;
-    }, [inputValue]);
+    const checkStrength = (pwd) => {
+        const medium = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$/;
+        const strong = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+        if (pwd && pwd.match(strong)) {
+            setStrength("Strong");
+        } else if (pwd && pwd.match(medium)) {
+            setStrength("Medium");
+        } else {
+            setStrength("Weak");
+        }
+    };
+
+    const handleChange = (e) => {
+        const input = e.target.value;
+        checkStrength(input);
+        setPassword(input);
+    };
 
     return (
         <MainLayout>
             <div style={{ marginTop: '1rem' }}>
                 <input
                     type="text"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    value={password}
+                    onChange={handleChange}
                 />
-                <h2>Current Value: {inputValue}</h2>
-                <h2>Previous Value: {previousInputValue.current}</h2>
+                <h2>
+                    Strength: {strength}
+                </h2>
             </div>
         </MainLayout>
     );
