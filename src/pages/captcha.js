@@ -2,7 +2,7 @@ import React from 'react';
 import MainLayout from "../components/Layouts/MainLayout";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const Cors = () => {
+const Captcha = () => {
   const handleChange = (value) => {
     console.log("Captcha value:", value);
   };
@@ -20,4 +20,4 @@ const Cors = () => {
   );
 };
 
-export default Cors;
+export default Captcha;
