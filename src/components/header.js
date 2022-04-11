@@ -2,7 +2,11 @@ import React from 'react';
 
 const header = () => {
     return (
-        <React.Fragment>
+        <div
+            style={{
+                marginBottom: "1rem",
+            }}
+        >
             <div>
                 <a href="/library/language">
                     /library/language
@@ -48,7 +52,7 @@ const header = () => {
                     /dynamic-routing/photos
                 </a>
             </div>
-        </React.Fragment>
+        </div>
     );
 };
 

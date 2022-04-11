@@ -26,14 +26,16 @@ const FeaturedProducts = () => {
             <h1>Featured Products</h1>
             <div className='item-container'>
                 {products.map((product) => (
-                    <div className='card' key={product.id}>
-                        <img src={product.image} alt='' />
-                        <h3>{product.brand}</h3>
-                        <p>{product.item}</p>
-                        <Link to={`/dynamic-routing/products/${product.id}`}>
-                            View
-                        </Link>
-                    </div>
+                    <Link to={`/dynamic-routing/products/${product.id}`}>
+                        <div className='card' key={product.id}>
+                            <img src={product.image} alt='' />
+                            <h3>{product.brand}</h3>
+                            <p>{product.item}</p>
+                            <Link to={`/dynamic-routing/products/${product.id}`}>
+                                View
+                            </Link>
+                        </div>
+                    </Link>
                 ))}
             </div>
         </MainLayout>

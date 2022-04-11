@@ -3,6 +3,7 @@ import { themePalette } from "../helper/theme/themePalette";
 import { ThemeContext } from "../helper/theme/themeProvider";
 import ThemeSwitch from "../components/themeSwitch";
 import Header from "../components/header";
+import MainLayout from "../components/Layouts/MainLayout";
 
 const getStyles = (mode) => ({
     header: {
@@ -29,16 +30,17 @@ const Theme = () => {
     const styles = getStyles(mode);
 
     return (
-        <div style={styles.app}>
-            <Header />
-            <h1 style={(styles.header, styles.text)}>
-                Have a nice day...!
-            </h1>
-            <h2 style={styles.text}>
-                Current theme is {mode} mode
-            </h2>
-            <ThemeSwitch />
-        </div>
+        <MainLayout>
+            <div style={styles.app}>
+                <h1 style={(styles.header, styles.text)}>
+                    Have a nice day...!
+                </h1>
+                <h2 style={styles.text}>
+                    Current theme is {mode} mode
+                </h2>
+                <ThemeSwitch />
+            </div>
+        </MainLayout>
     );
 };
 

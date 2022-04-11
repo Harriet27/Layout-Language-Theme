@@ -5,7 +5,7 @@ import ThemeSwitch from "../components/themeSwitch";
 import { Context } from "../helper/language/languageProvider";
 import LanguageSwitch from "../components/languageSwitch";
 import { FormattedMessage } from "react-intl";
-import Header from "../components/header";
+import MainLayout from "../components/Layouts/MainLayout";
 
 const getStyles = (mode) => ({
     header: {
@@ -34,28 +34,28 @@ const LanguangeTheme = () => {
     const styles = getStyles(mode);
 
     return (
-        <div style={styles.app}>
-            <Header />
-            <br />
-            <LanguageSwitch 
-                value={context.locale} 
-                onChange={context.selectLanguage} 
-            />
-            <h1 style={(styles.header, styles.text)}>
-                <FormattedMessage
-                    id="app.greeting"
-                    defaultMessage="Have a nice day...!"
+        <MainLayout>
+            <div style={styles.app}>
+                <LanguageSwitch 
+                    value={context.locale} 
+                    onChange={context.selectLanguage} 
                 />
-            </h1>
-            <h2 style={styles.text}>
-                <FormattedMessage
-                    id="app.theme"
-                    defaultMessage={"Current theme is <strong>" + mode + "</strong> mode"}
-                    values={{ theme: mode, strong: (word) => <strong>{word}</strong> }}
-                />
-            </h2>
-            <ThemeSwitch />
-        </div>
+                <h1 style={(styles.header, styles.text)}>
+                    <FormattedMessage
+                        id="app.greeting"
+                        defaultMessage="Have a nice day...!"
+                    />
+                </h1>
+                <h2 style={styles.text}>
+                    <FormattedMessage
+                        id="app.theme"
+                        defaultMessage={"Current theme is <strong>" + mode + "</strong> mode"}
+                        values={{ theme: mode, strong: (word) => <strong>{word}</strong> }}
+                    />
+                </h2>
+                <ThemeSwitch />
+            </div>
+        </MainLayout>
     );
 };
 
