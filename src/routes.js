@@ -17,6 +17,7 @@ const ReactQuery = lazy(() => import("./pages/reactQuery"));
 const Experiment = lazy(() => import("./pages/experiment"));
 const Photos = lazy(() => import("./pages/photos"));
 const Captcha = lazy(() => import("./pages/captcha"));
+const Network = lazy(() => import("./pages/network"));
 
 export default function Routes() {
     return useRoutes([
@@ -98,6 +99,14 @@ export default function Routes() {
                     element: (
                         <Suspense fallback={<Loader />}>
                             <Captcha />
+                        </Suspense>
+                    ),
+                },
+                {
+                    path: "network",
+                    element: (
+                        <Suspense fallback={<Loader />}>
+                            <Network />
                         </Suspense>
                     ),
                 },
