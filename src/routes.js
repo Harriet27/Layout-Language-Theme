@@ -16,6 +16,7 @@ const ProductDetail = lazy(() => import("./pages/productsDetail"));
 const ReactQuery = lazy(() => import("./pages/reactQuery"));
 const Experiment = lazy(() => import("./pages/experiment"));
 const Photos = lazy(() => import("./pages/photos"));
+const Captcha = lazy(() => import("./pages/captcha"));
 
 export default function Routes() {
     return useRoutes([
@@ -82,13 +83,21 @@ export default function Routes() {
             ],
         },
         {
-            path: "/extend",
+            path: "/experiment",
             children: [
                 {
                     path: "antd",
                     element: (
                         <Suspense fallback={<Loader />}>
                             <Antd />
+                        </Suspense>
+                    ),
+                },
+                {
+                    path: "captcha",
+                    element: (
+                        <Suspense fallback={<Loader />}>
+                            <Captcha />
                         </Suspense>
                     ),
                 },

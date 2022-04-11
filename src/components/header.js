@@ -29,8 +29,13 @@ const header = () => {
                 </a>
             </div>
             <div>
-                <a href="/extend/antd">
-                    /extend/antd
+                <a href="/experiment/antd">
+                    /experiment/antd
+                </a>
+            </div>
+            <div>
+                <a href="/experiment/captcha">
+                    /experiment/captcha
                 </a>
             </div>
             <div>
